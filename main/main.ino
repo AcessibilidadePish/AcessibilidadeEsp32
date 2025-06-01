@@ -198,7 +198,7 @@ void loop() {
 
   bool btn = digitalRead(PIN_BUTTON);
   if (btn == LOW) {
-    Serial.println("[BOTÃO] Pressionado12312312312312.");
+    Serial.println("[BOTÃO] Pressionado.");
     state = WAIT_GPS;
   }
 
@@ -231,9 +231,7 @@ void loop() {
       float lat = USE_GPS_MOCK ? MOCK_LAT : 0;
       float lng = USE_GPS_MOCK ? MOCK_LNG : 0;
       if (!USE_GPS_MOCK) gps.f_get_position(&lat, &lng);
-
-      String payload = "{\"lat\":" + String(lat,6) + ",\"lng\":" + String(lng,6) + "}";
-      mqtt.publish(topicTelemetry, payload.c_str());
+      
       bool okPost = postLocation(lat, lng);
 
       if (okPost) {
