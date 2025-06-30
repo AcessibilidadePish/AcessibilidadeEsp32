@@ -21,7 +21,7 @@
 /* ────────── REDE / API ────────── */
 const char* WIFI_SSID = "philipicalt";
 const char* WIFI_PASS = "190600phi";
-const char* API_URL   = "https://othergreyroof11.conveyor.cloud/Teste/TestePost";
+const char* API_URL   = "https://as-acessibilidadewebapi-afcxema8gae9g8h2.brazilsouth-01.azurewebsites.net/Teste/TestePost";
 
 /* ────────── MQTT (Azure IoT Hub) ────────── */
 const char* host     = "iot-pish.azure-devices.net";
@@ -39,8 +39,8 @@ const uint32_t ACK_TIMEOUTMS = 10000;
 
 /* ────────── DEBUG GPS MOCK ────────── */
 #define USE_GPS_MOCK true
-const float MOCK_LAT = -19.9275497f;
-const float MOCK_LNG = -43.9941561f;
+const float MOCK_LAT = -19.9243961f;
+const float MOCK_LNG = -43.9948428f;
 
 /* ────────── GLOBAIS ────────── */
 HardwareSerial gpsSerial(1);
